@@ -3,6 +3,7 @@ import React, { useCallback } from 'react';
 import { makeObservable, observable, computed, action } from 'mobx';
 import { observer } from 'mobx-react';
 import { render } from 'react-dom';
+import installStore from '../../../../src/installStore';
 
 const getId = (() => {
   let i = 1;
@@ -36,6 +37,7 @@ class TodoStore {
 }
 
 const storeInstance = new TodoStore();
+installStore(storeInstance);
 
 const TodoComponent = observer(({ todo }) => (
   <div>

@@ -5,7 +5,7 @@ import { ChangesIcon, MSTIcon } from './icons';
 
 export default class Tab extends React.PureComponent {
   static propTypes = {
-    type: PropTypes.oneOf(['changes', 'mst']),
+    type: PropTypes.oneOf(['changes', 'mst', 'State']),
     children: PropTypes.node,
     active: PropTypes.bool,
     processing: PropTypes.bool,

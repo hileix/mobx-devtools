@@ -3,6 +3,8 @@ import debugConnection from '../../utils/debugConnection';
 
 let onDisconnect;
 
+console.log('window.jsx:')
+
 const whenTabLoaded = (tabId, cb) => {
   chrome.tabs.get(tabId, tab => {
     if (tab.status !== 'loading') {
